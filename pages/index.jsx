@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(
     "https://raw.githubusercontent.com/jherr/pokemon/main/index.json"
   );
