@@ -4,7 +4,7 @@ import styles from "../../styles/Details.module.css";
 
 export async function getServerSideProps({ params }) {
   const res = await fetch(
-    `https://jherr-pokemon.s3.us-west-1.amazonaws.com/pokemon/${id}.json`
+    `https://jherr-pokemon.s3.us-west-1.amazonaws.com/pokemon/${params.id}.json`
   );
 
   return {
@@ -14,7 +14,7 @@ export async function getServerSideProps({ params }) {
   };
 }
 
-export default function Details() {
+export default function Details({ pokemon }) {
   return (
     <div>
       <Head>
